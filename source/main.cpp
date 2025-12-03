@@ -4,12 +4,17 @@
  */
 
 #include "common.hpp"
-#include ""
+#include "simulation.hpp"
+#include "arguments.hpp"
 using namespace sg;
 
 int main(int argc, char* argv[]) {
   // SnazeSimulation is a singleton.
-  SnazeSimulation::initialize(argc, argv);
+  
+  //SnazeSimulation::initialize(argc, argv);
+  ArgumentsReader args;
+  args.parse(argc, argv);
+
   // The Game Loop.
   while (not SnazeSimulation::is_over()) {
     SnazeSimulation::process_events();
