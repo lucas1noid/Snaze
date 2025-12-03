@@ -2,9 +2,9 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *<insira seu nome aqui>*
-- Email: *<insira seu email aqui>*
-- Turma: *<insira sua turma aqui>*
+- Nome: *<Lucas Gabriel da Silva Lopes>* *<Miguel Guion De Angelo Das Chagas>*
+- Email: *<lucas1noid@gmail.com>* *<miguel.chagas.133@ufrn.edu.br>*
+- Turma: *<01>*
 
 # Indique quais itens da avaliação foram realizados
 
