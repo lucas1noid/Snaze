@@ -3,7 +3,8 @@
  *  @author Selan R. dos Santos
  */
 
-#include "simulation.h"
+#include "common.hpp"
+#include ""
 using namespace sg;
 
 int main(int argc, char* argv[]) {
