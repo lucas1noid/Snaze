@@ -7,7 +7,7 @@ namespace sg {
     };
 
     //movimentos possiveis da cobrinha para todas as classes
-    enum class Direction{ 
+    enum Direction{ 
     NONE, 
     UP, 
     DOWN, 
@@ -15,5 +15,3 @@ namespace sg {
     RIGHT 
 };
 }
-
-//#include "common.hpp"
