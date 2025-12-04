@@ -6,6 +6,7 @@
 #include "common.hpp"
 #include "simulation.hpp"
 #include "arguments.hpp"
+
 using namespace sg;
 
 int main(int argc, char* argv[]) {

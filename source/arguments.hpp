@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 namespace sg {
     struct GameOptions {
@@ -10,8 +11,15 @@ namespace sg {
         std::string playerType = "backtracking";
     };
 
-    class ArgumentParser {
-    public:
-        static GameOptions parse(int argc, char* argv[]);
-    };
+class ArgumentsReader {
+public:
+    ArgumentsReader();
+
+    void parse(int argc, char* argv[]);
+
+    void printUsage() const;
+
+private:
+    GameOptions options;
+};
 }
