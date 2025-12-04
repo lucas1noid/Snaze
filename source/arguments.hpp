@@ -5,7 +5,7 @@
 namespace sg {
     struct GameOptions {
         std::string levelPath;
-        int fps = {};//n tem um padrao definido ainda
+        int fps = 5;
         int lives = 5;
         int food = 10;
         std::string playerType = "backtracking";
