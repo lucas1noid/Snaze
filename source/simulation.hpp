@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 namespace sg {
     class SnazeSimulation {
@@ -8,7 +9,7 @@ namespace sg {
         STARTING,    //! Tela inicial do jogo
         PLAYING,     //! Jogando (player ou IA)
         VICTORY,     //! Vitória
-        GAMEOVER     //! Derrota
+        GAMEOVER,     //! Derrota
         ENDING,      //! Finaliza o jogo
       };
     public:
