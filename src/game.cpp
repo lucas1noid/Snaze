@@ -1,6 +1,6 @@
-#include "game.hpp"
-#include "tcolor.hpp"
-#include "input_reader.hpp"
+#include "../lib/game.hpp"
+#include "../lib/tcolor.hpp"
+#include "../lib/input_reader.hpp"
 
 #include <iostream>
 #include <chrono>

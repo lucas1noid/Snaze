@@ -11,7 +11,7 @@ namespace sg
     class Game
     {
         public:
-        explicit Game(const std::vector<sg::Maze> mazes)
+        explicit Game(const std::vector<sg::Maze>& mazes)
         : m_currentSnake(), m_fruits(), m_currentMazeIndex(0), m_allMazes(mazes){}
 
         [[nodiscard]] std::vector<sg::Position> get_valid_positions() const;

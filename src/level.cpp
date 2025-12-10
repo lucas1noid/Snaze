@@ -1,5 +1,5 @@
-#include "level.hpp"
-#include "tcolor.hpp"
+#include "../lib/level.hpp"
+#include "../lib/tcolor.hpp"
 
 #include <filesystem> // Import for validate path
 #include <fstream> // Import for read files

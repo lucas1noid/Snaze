@@ -1,4 +1,4 @@
-#include "snake.hpp"
+#include "../lib/snake.hpp"
 
 void sg::Snake::head_position(unsigned short y, unsigned short x)
 {

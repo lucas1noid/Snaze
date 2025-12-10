@@ -1,6 +1,6 @@
 /**!
  *  This program implements the Snake simulation.
- *  @author Selan R. dos Santos
+ *  @author Selan R. dos Santos feat. noid e migs
  */
 
 
@@ -10,26 +10,14 @@
 
 //#include "simulation.hpp"
 //#include "arguments.hpp"
-#include "common.hpp"
-#include "level.hpp"
-#include "tcolor.hpp"
-#include "snake.hpp"
-#include "input_reader.hpp"
-#include "game.hpp"
+#include "../lib/common.hpp"
+#include "../lib/level.hpp"
+#include "../lib/tcolor.hpp"
+#include "../lib/snake.hpp"
+#include "../lib/input_reader.hpp"
+#include "../lib/game.hpp"
 
 int main(int argc, char* argv[]) {
-  // SnazeSimulation is a singleton.
-  
-  //SnazeSimulation::initialize(argc, argv);
-  // ArgumentsReader args;
-  // args.parse(argc, argv);
-
-  // // The Game Loop.
-  // while (not SnazeSimulation::is_over()) {
-  //   SnazeSimulation::process_events();
-  //   SnazeSimulation::update();
-  //   SnazeSimulation::render();
-  // }
 
   if (argc != 2)
   {
