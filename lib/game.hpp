@@ -13,10 +13,12 @@
 namespace sg
 {
 
-    enum class PlayerType {
-    HUMAN,
-    AI
-};
+    enum class PlayerType 
+    {
+        HUMAN,
+        AI
+    };
+    
     class Game
     {
         public:

@@ -23,12 +23,6 @@ namespace sg
         virtual ~SnakeController() = default;
         virtual sg::MoveDirection provide_snake_dir(const ControllerInput& state) = 0;
     };
-
-    class BacktrackingSnakeController : public SnakeController
-    {
-        public:
-        sg::MoveDirection provide_snake_dir(const ControllerInput& state) override;
-    };
 }
 
 #endif // CONTROLLER_HPP

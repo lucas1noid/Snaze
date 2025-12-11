@@ -161,7 +161,10 @@ CMakeFiles/snaze.dir/src/main.cpp.o: \
  /usr/include/c++/15/sstream /usr/include/c++/15/bits/sstream.tcc \
  /usr/include/c++/15/array /usr/include/c++/15/compare \
  /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/snake.hpp \
- /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/input_reader.hpp \
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/game.hpp \
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/arguments.hpp \
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/player_controller.hpp \
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/controller.hpp \
  /usr/include/termios.h /usr/include/bits/termios.h \
  /usr/include/bits/termios-struct.h /usr/include/bits/termios-c_cc.h \
  /usr/include/bits/termios-c_iflag.h /usr/include/bits/termios-c_oflag.h \
@@ -175,12 +178,7 @@ CMakeFiles/snaze.dir/src/main.cpp.o: \
  /usr/include/fcntl.h /usr/include/bits/fcntl.h \
  /usr/include/bits/fcntl-linux.h /usr/include/bits/types/struct_iovec.h \
  /usr/include/linux/falloc.h /usr/include/bits/stat.h \
- /usr/include/bits/struct_stat.h \
- /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/game.hpp \
- /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/arguments.hpp \
- /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/player_controller.hpp \
- /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/controller.hpp \
- /usr/include/c++/15/memory \
+ /usr/include/bits/struct_stat.h /usr/include/c++/15/memory \
  /usr/include/c++/15/bits/stl_raw_storage_iter.h \
  /usr/include/c++/15/bits/align.h /usr/include/c++/15/bits/shared_ptr.h \
  /usr/include/c++/15/bits/shared_ptr_base.h \

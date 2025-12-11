@@ -8,6 +8,7 @@ snaze: \
   CMakeFiles/snaze.dir/src/snake.cpp.o \
   CMakeFiles/snaze.dir/src/game.cpp.o \
   CMakeFiles/snaze.dir/src/player_controller.cpp.o \
+  CMakeFiles/snaze.dir/src/ai_controller.cpp.o \
   /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libm.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libm.so \
@@ -53,6 +54,8 @@ CMakeFiles/snaze.dir/src/snake.cpp.o:
 CMakeFiles/snaze.dir/src/game.cpp.o:
 
 CMakeFiles/snaze.dir/src/player_controller.cpp.o:
+
+CMakeFiles/snaze.dir/src/ai_controller.cpp.o:
 
 /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so:
 

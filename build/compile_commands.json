@@ -34,5 +34,11 @@
   "command": "/usr/bin/c++   -Wall -pedantic -g -o CMakeFiles/snaze.dir/src/player_controller.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp",
   "file": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp",
   "output": "CMakeFiles/snaze.dir/src/player_controller.cpp.o"
+},
+{
+  "directory": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/build",
+  "command": "/usr/bin/c++   -Wall -pedantic -g -o CMakeFiles/snaze.dir/src/ai_controller.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/ai_controller.cpp",
+  "file": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/ai_controller.cpp",
+  "output": "CMakeFiles/snaze.dir/src/ai_controller.cpp.o"
 }
 ]

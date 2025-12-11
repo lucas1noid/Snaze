@@ -1,6 +1,6 @@
 #include "../lib/game.hpp"
 #include "../lib/tcolor.hpp"
-#include "../lib/input_reader.hpp"
+#include "../lib/ai_controller.hpp"
 
 #include <iostream>
 #include <chrono>
@@ -124,6 +124,7 @@ void sg::Game::welcome_screen()
         else if (choice == '2')
         {
             m_playerType = PlayerType::AI;
+            m_controllerStrategy = std::make_unique<sg::RandomMoveController>();
             validChoice = true;
         }
         else if (choice == 'q')
@@ -182,8 +183,6 @@ void sg::Game::start()
 
 void sg::Game::update()
 {
-    sg::KeyboardController keyboard;
-
     while (1)
     {
         render();
@@ -196,8 +195,9 @@ void sg::Game::update()
 
         if (m_currentSnake.head_collided(get_current_maze()))
         {
-            m_currentSnake.take_damage();
             
+            m_currentSnake.take_damage();
+            render();
             if (m_currentSnake.is_dead())
             {
                 std::cout << "Morreu :(\n";

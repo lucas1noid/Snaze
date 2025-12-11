@@ -129,6 +129,30 @@ snaze/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/build
 .PHONY : snaze/fast
 
+src/ai_controller.o: src/ai_controller.cpp.o
+.PHONY : src/ai_controller.o
+
+# target to build an object file
+src/ai_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/ai_controller.cpp.o
+.PHONY : src/ai_controller.cpp.o
+
+src/ai_controller.i: src/ai_controller.cpp.i
+.PHONY : src/ai_controller.i
+
+# target to preprocess a source file
+src/ai_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/ai_controller.cpp.i
+.PHONY : src/ai_controller.cpp.i
+
+src/ai_controller.s: src/ai_controller.cpp.s
+.PHONY : src/ai_controller.s
+
+# target to generate assembly for a file
+src/ai_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/ai_controller.cpp.s
+.PHONY : src/ai_controller.cpp.s
+
 src/arguments.o: src/arguments.cpp.o
 .PHONY : src/arguments.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... snaze"
+	@echo "... src/ai_controller.o"
+	@echo "... src/ai_controller.i"
+	@echo "... src/ai_controller.s"
 	@echo "... src/arguments.o"
 	@echo "... src/arguments.i"
 	@echo "... src/arguments.s"

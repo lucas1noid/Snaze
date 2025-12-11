@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/ai_controller.cpp" "CMakeFiles/snaze.dir/src/ai_controller.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/ai_controller.cpp.o.d"
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/arguments.cpp" "CMakeFiles/snaze.dir/src/arguments.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/arguments.cpp.o.d"
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp" "CMakeFiles/snaze.dir/src/game.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/game.cpp.o.d"
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/level.cpp" "CMakeFiles/snaze.dir/src/level.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/level.cpp.o.d"

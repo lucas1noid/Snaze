@@ -12,6 +12,7 @@ add_executable(${APP_NAME}
 "src/snake.cpp"
 "src/game.cpp"
 "src/player_controller.cpp"
+"src/ai_controller.cpp"
 )
 
 target_compile_features( ${APP_NAME} PUBLIC cxx_std_17)

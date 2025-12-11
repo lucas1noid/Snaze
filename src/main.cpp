@@ -14,7 +14,6 @@
 #include "../lib/level.hpp"
 #include "../lib/tcolor.hpp"
 #include "../lib/snake.hpp"
-#include "../lib/input_reader.hpp"
 #include "../lib/game.hpp"
 #include "../lib/arguments.hpp"
 

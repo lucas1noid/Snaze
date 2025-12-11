@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/snaze.dir/link.d"
+  "CMakeFiles/snaze.dir/src/ai_controller.cpp.o"
+  "CMakeFiles/snaze.dir/src/ai_controller.cpp.o.d"
   "CMakeFiles/snaze.dir/src/arguments.cpp.o"
   "CMakeFiles/snaze.dir/src/arguments.cpp.o.d"
   "CMakeFiles/snaze.dir/src/game.cpp.o"
