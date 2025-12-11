@@ -5,7 +5,10 @@
 #include "snake.hpp"
 #include "level.hpp"
 #include "arguments.hpp"
+#include "player_controller.hpp"
+
 #include <chrono>
+#include <memory>
 
 namespace sg
 {
@@ -30,7 +33,6 @@ namespace sg
         void update();
         bool set_maze(std::size_t mazeIndex);
         bool next_maze();
-        void set_fps(int fps);
         bool spawn_food();
 
         private:
@@ -41,6 +43,7 @@ namespace sg
         std::vector<sg::Maze> m_allMazes;
         PlayerType m_playerType{PlayerType::HUMAN};
         
+        std::unique_ptr<sg::SnakeController> m_controllerStrategy;
         //tirei elas do construtor aq no hpp e mandei pro cpp
 
         std::chrono::milliseconds m_frameDuration;

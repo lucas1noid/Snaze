@@ -8,10 +8,10 @@ set (APP_NAME "snaze")
 add_executable(${APP_NAME} 
 "src/main.cpp" 
 "src/arguments.cpp" 
-"src/level.cpp" 
-"src/player.cpp" 
+"src/level.cpp"
 "src/snake.cpp"
 "src/game.cpp"
+"src/player_controller.cpp"
 )
 
 target_compile_features( ${APP_NAME} PUBLIC cxx_std_17)

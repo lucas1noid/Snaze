@@ -114,24 +114,10 @@ CMakeFiles/snaze.dir/src/level.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snaze.dir/src/level.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/level.cpp -o CMakeFiles/snaze.dir/src/level.cpp.s
 
-CMakeFiles/snaze.dir/src/player.cpp.o: CMakeFiles/snaze.dir/flags.make
-CMakeFiles/snaze.dir/src/player.cpp.o: /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp
-CMakeFiles/snaze.dir/src/player.cpp.o: CMakeFiles/snaze.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snaze.dir/src/player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snaze.dir/src/player.cpp.o -MF CMakeFiles/snaze.dir/src/player.cpp.o.d -o CMakeFiles/snaze.dir/src/player.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp
-
-CMakeFiles/snaze.dir/src/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snaze.dir/src/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp > CMakeFiles/snaze.dir/src/player.cpp.i
-
-CMakeFiles/snaze.dir/src/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snaze.dir/src/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp -o CMakeFiles/snaze.dir/src/player.cpp.s
-
 CMakeFiles/snaze.dir/src/snake.cpp.o: CMakeFiles/snaze.dir/flags.make
 CMakeFiles/snaze.dir/src/snake.cpp.o: /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/snake.cpp
 CMakeFiles/snaze.dir/src/snake.cpp.o: CMakeFiles/snaze.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snaze.dir/src/snake.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/snaze.dir/src/snake.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snaze.dir/src/snake.cpp.o -MF CMakeFiles/snaze.dir/src/snake.cpp.o.d -o CMakeFiles/snaze.dir/src/snake.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/snake.cpp
 
 CMakeFiles/snaze.dir/src/snake.cpp.i: cmake_force
@@ -145,7 +131,7 @@ CMakeFiles/snaze.dir/src/snake.cpp.s: cmake_force
 CMakeFiles/snaze.dir/src/game.cpp.o: CMakeFiles/snaze.dir/flags.make
 CMakeFiles/snaze.dir/src/game.cpp.o: /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp
 CMakeFiles/snaze.dir/src/game.cpp.o: CMakeFiles/snaze.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/snaze.dir/src/game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snaze.dir/src/game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snaze.dir/src/game.cpp.o -MF CMakeFiles/snaze.dir/src/game.cpp.o.d -o CMakeFiles/snaze.dir/src/game.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp
 
 CMakeFiles/snaze.dir/src/game.cpp.i: cmake_force
@@ -156,14 +142,28 @@ CMakeFiles/snaze.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snaze.dir/src/game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp -o CMakeFiles/snaze.dir/src/game.cpp.s
 
+CMakeFiles/snaze.dir/src/player_controller.cpp.o: CMakeFiles/snaze.dir/flags.make
+CMakeFiles/snaze.dir/src/player_controller.cpp.o: /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp
+CMakeFiles/snaze.dir/src/player_controller.cpp.o: CMakeFiles/snaze.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/snaze.dir/src/player_controller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/snaze.dir/src/player_controller.cpp.o -MF CMakeFiles/snaze.dir/src/player_controller.cpp.o.d -o CMakeFiles/snaze.dir/src/player_controller.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp
+
+CMakeFiles/snaze.dir/src/player_controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/snaze.dir/src/player_controller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp > CMakeFiles/snaze.dir/src/player_controller.cpp.i
+
+CMakeFiles/snaze.dir/src/player_controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/snaze.dir/src/player_controller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp -o CMakeFiles/snaze.dir/src/player_controller.cpp.s
+
 # Object files for target snaze
 snaze_OBJECTS = \
 "CMakeFiles/snaze.dir/src/main.cpp.o" \
 "CMakeFiles/snaze.dir/src/arguments.cpp.o" \
 "CMakeFiles/snaze.dir/src/level.cpp.o" \
-"CMakeFiles/snaze.dir/src/player.cpp.o" \
 "CMakeFiles/snaze.dir/src/snake.cpp.o" \
-"CMakeFiles/snaze.dir/src/game.cpp.o"
+"CMakeFiles/snaze.dir/src/game.cpp.o" \
+"CMakeFiles/snaze.dir/src/player_controller.cpp.o"
 
 # External object files for target snaze
 snaze_EXTERNAL_OBJECTS =
@@ -171,9 +171,9 @@ snaze_EXTERNAL_OBJECTS =
 snaze: CMakeFiles/snaze.dir/src/main.cpp.o
 snaze: CMakeFiles/snaze.dir/src/arguments.cpp.o
 snaze: CMakeFiles/snaze.dir/src/level.cpp.o
-snaze: CMakeFiles/snaze.dir/src/player.cpp.o
 snaze: CMakeFiles/snaze.dir/src/snake.cpp.o
 snaze: CMakeFiles/snaze.dir/src/game.cpp.o
+snaze: CMakeFiles/snaze.dir/src/player_controller.cpp.o
 snaze: CMakeFiles/snaze.dir/build.make
 snaze: CMakeFiles/snaze.dir/compiler_depend.ts
 snaze: CMakeFiles/snaze.dir/link.txt

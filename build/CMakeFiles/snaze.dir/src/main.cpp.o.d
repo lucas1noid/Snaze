@@ -177,4 +177,18 @@ CMakeFiles/snaze.dir/src/main.cpp.o: \
  /usr/include/linux/falloc.h /usr/include/bits/stat.h \
  /usr/include/bits/struct_stat.h \
  /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/game.hpp \
- /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/arguments.hpp
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/arguments.hpp \
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/player_controller.hpp \
+ /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/../lib/controller.hpp \
+ /usr/include/c++/15/memory \
+ /usr/include/c++/15/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/15/bits/align.h /usr/include/c++/15/bits/shared_ptr.h \
+ /usr/include/c++/15/bits/shared_ptr_base.h \
+ /usr/include/c++/15/bits/allocated_ptr.h \
+ /usr/include/c++/15/ext/aligned_buffer.h \
+ /usr/include/c++/15/ext/concurrence.h \
+ /usr/include/c++/15/bits/shared_ptr_atomic.h \
+ /usr/include/c++/15/bits/atomic_base.h \
+ /usr/include/c++/15/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/15/backward/auto_ptr.h \
+ /usr/include/c++/15/pstl/glue_memory_defs.h

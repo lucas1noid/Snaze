@@ -12,7 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp" "CMakeFiles/snaze.dir/src/game.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/game.cpp.o.d"
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/level.cpp" "CMakeFiles/snaze.dir/src/level.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/level.cpp.o.d"
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/main.cpp" "CMakeFiles/snaze.dir/src/main.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/main.cpp.o.d"
-  "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp" "CMakeFiles/snaze.dir/src/player.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/player.cpp.o.d"
+  "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp" "CMakeFiles/snaze.dir/src/player_controller.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/player_controller.cpp.o.d"
   "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/snake.cpp" "CMakeFiles/snaze.dir/src/snake.cpp.o" "gcc" "CMakeFiles/snaze.dir/src/snake.cpp.o.d"
   "" "snaze" "gcc" "CMakeFiles/snaze.dir/link.d"
   )

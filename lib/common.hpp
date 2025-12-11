@@ -63,6 +63,12 @@ namespace sg
             return m_y == y && m_x == x;
         }
 
+        inline MoveDirection operator+(const MoveDirection& rhs) const
+        {
+            MoveDirection result(m_y + rhs.m_y, m_x + rhs.m_x);
+            return result;
+        }
+
         // If x and y move direction both are 0, the current direction is null i. e. the object is in idle state.
     }; // struct MoveDirection
 

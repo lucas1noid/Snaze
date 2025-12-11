@@ -130,6 +130,7 @@ bool sg::Snake::is_dead() const
 void sg::Snake::reset_snake_food()
 {
     m_fruitsEaten = 0;
+    m_creatingBodyFlag = false;
     m_snakeBody.clear();
 }
 

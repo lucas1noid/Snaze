@@ -19,12 +19,6 @@
 },
 {
   "directory": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/build",
-  "command": "/usr/bin/c++   -Wall -pedantic -g -o CMakeFiles/snaze.dir/src/player.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp",
-  "file": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player.cpp",
-  "output": "CMakeFiles/snaze.dir/src/player.cpp.o"
-},
-{
-  "directory": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/build",
   "command": "/usr/bin/c++   -Wall -pedantic -g -o CMakeFiles/snaze.dir/src/snake.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/snake.cpp",
   "file": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/snake.cpp",
   "output": "CMakeFiles/snaze.dir/src/snake.cpp.o"
@@ -34,5 +28,11 @@
   "command": "/usr/bin/c++   -Wall -pedantic -g -o CMakeFiles/snaze.dir/src/game.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp",
   "file": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/game.cpp",
   "output": "CMakeFiles/snaze.dir/src/game.cpp.o"
+},
+{
+  "directory": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/build",
+  "command": "/usr/bin/c++   -Wall -pedantic -g -o CMakeFiles/snaze.dir/src/player_controller.cpp.o -c /home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp",
+  "file": "/home/miguel/Github/t07-projeto-snaze-the_last_dance/src/player_controller.cpp",
+  "output": "CMakeFiles/snaze.dir/src/player_controller.cpp.o"
 }
 ]

@@ -225,29 +225,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/player.o: src/player.cpp.o
-.PHONY : src/player.o
+src/player_controller.o: src/player_controller.cpp.o
+.PHONY : src/player_controller.o
 
 # target to build an object file
-src/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/player.cpp.o
-.PHONY : src/player.cpp.o
+src/player_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/player_controller.cpp.o
+.PHONY : src/player_controller.cpp.o
 
-src/player.i: src/player.cpp.i
-.PHONY : src/player.i
+src/player_controller.i: src/player_controller.cpp.i
+.PHONY : src/player_controller.i
 
 # target to preprocess a source file
-src/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/player.cpp.i
-.PHONY : src/player.cpp.i
+src/player_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/player_controller.cpp.i
+.PHONY : src/player_controller.cpp.i
 
-src/player.s: src/player.cpp.s
-.PHONY : src/player.s
+src/player_controller.s: src/player_controller.cpp.s
+.PHONY : src/player_controller.s
 
 # target to generate assembly for a file
-src/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/player.cpp.s
-.PHONY : src/player.cpp.s
+src/player_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snaze.dir/build.make CMakeFiles/snaze.dir/src/player_controller.cpp.s
+.PHONY : src/player_controller.cpp.s
 
 src/snake.o: src/snake.cpp.o
 .PHONY : src/snake.o
@@ -294,9 +294,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/player.o"
-	@echo "... src/player.i"
-	@echo "... src/player.s"
+	@echo "... src/player_controller.o"
+	@echo "... src/player_controller.i"
+	@echo "... src/player_controller.s"
 	@echo "... src/snake.o"
 	@echo "... src/snake.i"
 	@echo "... src/snake.s"

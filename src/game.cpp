@@ -118,6 +118,7 @@ void sg::Game::welcome_screen()
         if (choice == '1')
         {
             m_playerType = PlayerType::HUMAN;
+            m_controllerStrategy = std::make_unique<sg::PlayerSnakeController>();
             validChoice = true;
         }
         else if (choice == '2')
@@ -186,20 +187,11 @@ void sg::Game::update()
     while (1)
     {
         render();
-        
-        char key = keyboard.readKey();
-        if (key != 0) 
-        {
-            if (key == 'w') m_currentSnake.move_direction(-1, 0);
-            if (key == 's') m_currentSnake.move_direction(1, 0);
-            if (key == 'a') m_currentSnake.move_direction(0, -1);
-            if (key == 'd') m_currentSnake.move_direction(0, 1);
-            if (key == '1') m_currentSnake.eat_food();
-            if (key == 't') m_currentSnake.move_direction(0, 0);
 
-            if (key == 'q') break; // Sair do jogo
-        }
+        sg::ControllerInput context(get_current_maze(), m_currentSnake);
 
+        sg::MoveDirection newMoveDirection = m_controllerStrategy.get()->provide_snake_dir(context);
+        m_currentSnake.move_direction(newMoveDirection);
         m_currentSnake.update_position_by_move_direction();
 
         if (m_currentSnake.head_collided(get_current_maze()))
