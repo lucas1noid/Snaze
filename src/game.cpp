@@ -7,6 +7,19 @@
 #include <thread>
 #include <cstdlib>
 
+sg::Game::Game(const std::vector<sg::Maze>& mazes, const GameOptions& options)
+: m_allMazes(mazes),
+  m_currentMazeIndex(0),
+  m_lives(options.lives),
+  m_totalFoodToEat(options.food),
+  m_fruitsEaten(0)
+{
+    //transforma fps em tempo de frame
+    int fps = (options.fps > 0) ? options.fps : 1;
+    m_frameDuration = std::chrono::milliseconds(1000 / fps);
+    
+}
+
 std::vector<sg::Position> sg::Game::get_valid_positions() const
 {
     std::vector<sg::Position> result;
@@ -73,12 +86,68 @@ void sg::Game::next_maze()
     set_maze(m_currentMazeIndex + 1);
 }
 
+void sg::Game::welcome_screen()
+{
+    bool validChoice = false;
+    char choice;
+
+    while (!validChoice)
+    {
+        std::cout << "\033[2J\033[1;1H";
+
+        std::cout << TColor::colorize("--------------------------------------------------\n", TColor::BLUE, TColor::BOLD);
+        std::cout << TColor::colorize("|              S N A Z E   G A M E               |\n", TColor::BLUE, TColor::BOLD);
+        std::cout << TColor::colorize("--------------------------------------------------\n\n", TColor::BLUE, TColor::BOLD);
+
+        std::cout << "   Escolha o modo de jogo:\n\n";
+
+        std::cout << "   [" << TColor::colorize("1", TColor::YELLOW, TColor::BOLD) << "] - " 
+                  << TColor::colorize("Jogador", TColor::GREEN) << "\n";
+        std::cout << "       Controle a cobra com W, A, S, D.\n\n";
+
+        std::cout << "   [" << TColor::colorize("2", TColor::YELLOW, TColor::BOLD) << "] - " 
+                  << TColor::colorize("IA", TColor::MAGENTA) << "\n";
+        std::cout << "       Assista a IA jogar sozinha, tentando ganhar! ou lutando para sobreviver...\n\n";
+
+        std::cout << "   Digite sua opcao: ";
+
+        std::cin >> choice;
+
+        if (choice == '1')
+        {
+            m_playerType = PlayerType::HUMAN;
+            validChoice = true;
+        }
+        else if (choice == '2')
+        {
+            m_playerType = PlayerType::AI;
+            validChoice = true;
+        }
+        else
+        {
+            std::cout << TColor::colorize("\n   Opcao invalida! Tente novamente.\n", TColor::RED);
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+            
+            std::cin.ignore(1000, '\n');
+            std::cin.clear();
+        }
+    }
+
+    //feedback antes de comecar
+    std::cout << "\n   Iniciando jogo no modo: " 
+              << (m_playerType == PlayerType::HUMAN ? "HUMANO" : "IA") 
+              << "...\n";
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
+
 void sg::Game::start()
 {
     if (m_allMazes.size() <= 0)
     {
         return;
     }
+
+    welcome_screen();
 
     set_maze(0);
     m_currentSnake = sg::Snake();
@@ -127,6 +196,7 @@ void sg::Game::update()
             if (m_fruits[fIndex] == m_currentSnake.head_position())
             {
                 m_currentSnake.add_body();
+                m_fruitsEaten++;
                 m_fruits.erase(m_fruits.begin() + fIndex);
 
                 std::vector<sg::Position> pos = get_valid_positions();
@@ -196,8 +266,10 @@ void sg::Game::render() const
         std::cout << '\n';
     }
 
-    std::cout << "Available apples: " << m_fruits.size() << '\n';
-    std::cout << "Snake size: " << m_currentSnake.snake_body().size() << '\n';
+    std::cout << "--------------------------------------------------\n";
+    std::cout << " Lives: " << std::to_string(m_lives)
+              << " | Fruits Eaten: " << m_fruitsEaten << "/" << m_totalFoodToEat
+              << " | Snake Size: " << m_currentSnake.snake_body().size() << '\n';
     std::cout << "Move direction: [" << m_currentSnake.move_direction() << "]\n";
     std::cout << "Head position: [" << m_currentSnake.head_position() << "]\n";
 }

@@ -6,7 +6,7 @@ namespace sg {
 
 ArgumentsReader::ArgumentsReader(){};
     
-void ArgumentsReader::parse(int argc, char* argv[]){
+void ArgumentsReader::parse(int argc, char* argv[], GameOptions& options){
     if(argc < 2){
         printUsage();
         exit(0);

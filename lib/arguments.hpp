@@ -15,11 +15,9 @@ class ArgumentsReader {
 public:
     ArgumentsReader();
 
-    void parse(int argc, char* argv[]);
+    void parse(int argc, char* argv[], GameOptions& options);
 
     void printUsage() const;
 
-private:
-    GameOptions options;
 };
 }
