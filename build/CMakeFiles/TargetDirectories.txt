@@ -1,0 +1,3 @@
+/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles/snaze.dir
+/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles/edit_cache.dir
+/home/miguel/Github/t07-projeto-snaze-the_last_dance/build/CMakeFiles/rebuild_cache.dir

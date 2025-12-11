@@ -1,5 +1,10 @@
 #include "../lib/snake.hpp"
 
+sg::Snake::Snake(const sg::Position startPos, unsigned short lives, unsigned short foodToEat)
+: m_startHeadPosition(startPos), m_lives(lives), m_totalFoodToEat(foodToEat),
+m_creatingBodyFlag(false), m_fruitsEaten(0), m_headMoveDirection(sg::MoveDirection(0, 0)), m_headPosition(startPos), m_snakeBody()
+{}
+
 void sg::Snake::head_position(unsigned short y, unsigned short x)
 {
     m_headPosition.m_y = y;
@@ -52,9 +57,10 @@ void sg::Snake::update_position_by_move_direction()
     m_headPosition.m_x += m_headMoveDirection.m_x;
 }
 
-void sg::Snake::add_body()
+void sg::Snake::eat_food()
 {
     m_creatingBodyFlag = true;
+    ++m_fruitsEaten;
 }
 
 char sg::Snake::get_head_char() const
@@ -88,7 +94,7 @@ bool sg::Snake::validate_position(const sg::Position& pos) const
     return true;
 }
 
-bool sg::Snake::is_dead(const sg::Maze& maze) const
+bool sg::Snake::head_collided(const sg::Maze& maze) const
 {
     for (const sg::Position& body : m_snakeBody)
     {
@@ -104,4 +110,45 @@ bool sg::Snake::is_dead(const sg::Maze& maze) const
     }
 
     return false;
+}
+
+void sg::Snake::take_damage()
+{
+    if (m_lives <= 0)
+    {
+        return;
+    }
+
+    --m_lives;
+}
+
+bool sg::Snake::is_dead() const
+{
+    return m_lives == 0;
+}
+
+void sg::Snake::reset_snake_food()
+{
+    m_fruitsEaten = 0;
+    m_snakeBody.clear();
+}
+
+bool sg::Snake::food_reached() const
+{
+    return m_fruitsEaten >= m_totalFoodToEat;
+}
+
+void sg::Snake::replace_snake()
+{
+    reset_snake_food();
+    m_headPosition = m_startHeadPosition;
+    m_headMoveDirection = sg::MoveDirection(0, 0);
+}
+
+void sg::Snake::maze_update(const sg::Maze& maze)
+{
+    reset_snake_food();
+    m_startHeadPosition = maze.get_start_position();
+    m_headPosition = maze.get_start_position();
+    m_headMoveDirection = sg::MoveDirection(0, 0);
 }

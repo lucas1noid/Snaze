@@ -16,7 +16,7 @@ namespace sg
             tcgetattr(STDIN_FILENO, &original_terminal);
             
             // Configura o novo modo
-            struct termios raw = original_terminal;
+            termios raw = original_terminal;
             raw.c_lflag &= ~(ICANON | ECHO); // Desliga buffer de linha e echo na tela
             raw.c_cc[VMIN] = 0;  // Não espera nenhum caractere mínimo para retornar
             raw.c_cc[VTIME] = 0; // Não espera tempo
@@ -45,7 +45,7 @@ namespace sg
         }
 
     private:
-        struct termios original_terminal;
+        termios original_terminal;
     };
 }
 

@@ -15,7 +15,7 @@ namespace sg
         /// @brief A constructor for Position struct.
         /// @param y the Y position, default value = 0.
         /// @param x the X position, default value = 0.
-        Position(unsigned short y = 0, unsigned short x = 0) :
+        explicit Position(unsigned short y = 0, unsigned short x = 0) :
         m_y(y), m_x(x){}
 
         unsigned short m_y; //!< Y Axis object position

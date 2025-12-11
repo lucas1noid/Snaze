@@ -22,11 +22,12 @@ void ArgumentsReader::parse(int argc, char* argv[], GameOptions& options){
             options.lives = std::stoi(argv[++i]);
         } else if(arg == "--food" && i + 1 < argc){
             options.food = std::stoi(argv[++i]);
-        } else if(arg == "--playertype" && i + 1 < argc){
-            options.playerType = argv[++i];
         } else {
             options.levelPath = arg;
         }
+        // else if(arg == "--playertype" && i + 1 < argc){
+        //     options.playerType = argv[++i];
+        // } 
     }
 }
 
@@ -36,7 +37,7 @@ void ArgumentsReader::printUsage() const {
                   << "    --help               Print this help text.\n"
                   << "    --fps <num>          Number of frames (board) presented per second.\n"
                   << "    --lives <num>        Number of lives the snake shall have. Default = 5.\n"
-                  << "    --food <num>         Number of food pellets for the entire simulation. Default = 10.\n"
-                  << "    --playertype <type>  Type of snake intelligence: random, backtracking. Default = backtracking\n";
+                  << "    --food <num>         Number of food pellets for the entire simulation. Default = 10.\n";
+                  //<< "    --playertype <type>  Type of snake intelligence: random, backtracking. Default = backtracking\n";
     }
 }

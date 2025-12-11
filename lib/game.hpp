@@ -29,8 +29,9 @@ namespace sg
         void start();
         void update();
         bool set_maze(std::size_t mazeIndex);
-        void next_maze();
+        bool next_maze();
         void set_fps(int fps);
+        bool spawn_food();
 
         private:
         sg::Snake m_currentSnake;
@@ -41,9 +42,7 @@ namespace sg
         PlayerType m_playerType{PlayerType::HUMAN};
         
         //tirei elas do construtor aq no hpp e mandei pro cpp
-        int m_lives;
-        int m_totalFoodToEat;
-        int m_fruitsEaten{0};
+
         std::chrono::milliseconds m_frameDuration;
 
         void render() const;
