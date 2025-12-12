@@ -52,7 +52,8 @@ namespace sg
 
         void render() const;
         void welcome_screen();
-
+        void lose_screen();
+        void win_screen();
     }; // Class SnakeGame
 
 } // Namespace sg
