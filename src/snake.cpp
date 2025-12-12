@@ -16,15 +16,15 @@ void sg::Snake::head_position(const sg::Position& newPosition)
     head_position(newPosition.m_y, newPosition.m_x);
 }
 
-void sg::Snake::move_direction(short y, short x)
+void sg::Snake::set_move_direction(short y, short x)
 {
     m_headMoveDirection.m_y = y;
     m_headMoveDirection.m_x = x;
 }
 
-void sg::Snake::move_direction(const sg::MoveDirection& newMoveDir)
+void sg::Snake::set_move_direction(const sg::MoveDirection& newMoveDir)
 {
-    move_direction(newMoveDir.m_y, newMoveDir.m_x);
+    set_move_direction(newMoveDir.m_y, newMoveDir.m_x);
 }
 
 void sg::Snake::update_position_by_move_direction()

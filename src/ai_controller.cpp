@@ -55,5 +55,63 @@ sg::MoveDirection sg::BacktrackingMoveController::provide_snake_dir(const sg::Co
         return result;
     }
 
+    m_foodPos = ctx.m_food;
+    m_maze = ctx.m_maze;
+    m_visitedPosition.clear();
+
+    if (calculate_path(ctx.m_snake))
+    {
+        if (!m_movePath.empty())
+        {
+            sg::MoveDirection result = m_movePath.top();
+            m_movePath.pop();
+            return result;
+        }
+    }
+
+    return ctx.m_snake.move_direction();
+}
+
+bool sg::BacktrackingMoveController::calculate_path(sg::Snake currentSnake)
+{
+    for (sg::Position& f : m_foodPos)
+    {
+        if (currentSnake.head_position() == f)
+        { 
+            return true;
+        }
+    }
+
+    const sg::Position& head = currentSnake.head_position();
+    m_visitedPosition.insert(head);
     
+
+    for (sg::MoveDirection& dir : m_validMoves)
+    {
+        if ((dir + currentSnake.move_direction()).equals(0, 0))
+        {
+            continue;
+        }
+
+        sg::Position newPos = head + dir;
+
+        if (currentSnake.head_collided(m_maze))
+        {
+            continue;
+        }
+        if (m_visitedPosition.count(newPos) > 0)
+        {
+            continue;
+        }
+        currentSnake.set_move_direction(dir);
+        currentSnake.update_position_by_move_direction();
+        bool foundPath = calculate_path(currentSnake);
+        if (foundPath)
+        {
+            m_movePath.push(dir);
+            return true;
+        }
+    }
+
+    return false;
 }

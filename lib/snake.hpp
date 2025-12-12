@@ -28,8 +28,8 @@ namespace sg
         [[nodiscard]]
         inline const sg::MoveDirection& move_direction() const { return m_headMoveDirection; }
 
-        void move_direction(short y = 0, short x = 0);
-        void move_direction(const sg::MoveDirection& newMoveDirection);
+        void set_move_direction(short y = 0, short x = 0);
+        void set_move_direction(const sg::MoveDirection& newMoveDirection);
 
         void update_position_by_move_direction();
 

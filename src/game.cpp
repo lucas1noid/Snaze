@@ -187,10 +187,10 @@ void sg::Game::update()
     {
         render();
 
-        sg::ControllerInput context(get_current_maze(), m_currentSnake);
+        sg::ControllerInput context(get_current_maze(), m_currentSnake, m_fruits);
 
         sg::MoveDirection newMoveDirection = m_controllerStrategy.get()->provide_snake_dir(context);
-        m_currentSnake.move_direction(newMoveDirection);
+        m_currentSnake.set_move_direction(newMoveDirection);
         m_currentSnake.update_position_by_move_direction();
 
         if (m_currentSnake.head_collided(get_current_maze()))

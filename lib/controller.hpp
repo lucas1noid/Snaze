@@ -10,11 +10,12 @@ namespace sg
 {
     struct ControllerInput
     {
-        inline ControllerInput(const sg::Maze& maze, const sg::Snake& snake)
-        : m_maze(maze), m_snake(snake) {}
+        inline ControllerInput(const sg::Maze& maze, const sg::Snake& snake, const std::vector<sg::Position>& foodPosition)
+        : m_maze(maze), m_snake(snake), m_food(foodPosition) {}
         
         const sg::Maze& m_maze;
         const sg::Snake& m_snake;
+        const std::vector<sg::Position>& m_food;
     };
 
     class SnakeController
