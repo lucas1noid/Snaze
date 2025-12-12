@@ -61,6 +61,7 @@ void sg::Snake::eat_food()
 {
     m_creatingBodyFlag = true;
     ++m_fruitsEaten;
+    ++m_score;
 }
 
 char sg::Snake::get_head_char() const

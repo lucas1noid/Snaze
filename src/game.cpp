@@ -83,6 +83,26 @@ bool sg::Game::next_maze()
     return set_maze(m_currentMazeIndex + 1);
 }
 
+void sg::Game::lose_screen()
+{
+        //std::cout << "\033[2J\033[1;1H";
+
+        std::cout << TColor::colorize("-----------------------------------------------------------------------\n", TColor::RED, TColor::BOLD);
+        std::cout << TColor::colorize("|              Y O U  H A V E  L O S T  T H E  G A M E                |\n", TColor::RED, TColor::BOLD);
+        std::cout << TColor::colorize("-----------------------------------------------------------------------\n\n", TColor::RED, TColor::BOLD);
+        std::cout << TColor::colorize("                B E T T E R  L U C K  N E X T  T I M E !                     \n\n", TColor::BRIGHT_BLACK, TColor::BLINK);
+}
+
+void sg::Game::win_screen()
+{
+        //std::cout << "\033[2J\033[1;1H";
+
+        std::cout << TColor::colorize("-----------------------------------------------------------------------\n", TColor::GREEN, TColor::BOLD);
+        std::cout << TColor::colorize("|              Y O U  H A V E  W O N  T H E  G A M E                  |\n", TColor::GREEN, TColor::BOLD);
+        std::cout << TColor::colorize("-----------------------------------------------------------------------\n\n", TColor::GREEN, TColor::BOLD);
+        std::cout << TColor::colorize("                     C O N G R A T U L A T I O N S !                     \n\n", TColor::BRIGHT_BLACK, TColor::BLINK);
+}
+
 void sg::Game::welcome_screen()
 {
     bool validChoice = false;
@@ -200,7 +220,7 @@ void sg::Game::update()
             render();
             if (m_currentSnake.is_dead())
             {
-                std::cout << "Morreu :(\n";
+                lose_screen();
                 break;
             }
             else
@@ -217,7 +237,8 @@ void sg::Game::update()
                 m_fruits.erase(m_fruits.begin() + fIndex);
                 if (!spawn_food())
                 {
-                    std::cout << "Nenhum espaço livre para comida, Você ganhou!\n";
+                    render();
+                    win_screen();
                     break;
                 }
             }
@@ -232,13 +253,15 @@ void sg::Game::update()
                 m_fruits.clear();
                 if (!spawn_food())
                 {
-                    std::cout << "Nenhum espaço livre para comida, Você ganhou!\n";
+                    render();
+                    win_screen();
                     break;
                 }
             }
             else
             {
-                std::cout << "Parabens vc ganhou!\n";
+                render();
+                win_screen();
                 break;
             }
         }
@@ -282,7 +305,7 @@ void sg::Game::render() const
             {
                 if (fruit == currentPos)
                 {
-                    std::cout << TColor::colorize('@', TColor::RED, TColor::BOLD);
+                    std::cout << TColor::colorize('Q', TColor::RED, TColor::BOLD);
                     charPrinted = true;
                     break;
                 }
@@ -297,7 +320,7 @@ void sg::Game::render() const
             {
                 if (snakeBody == currentPos)
                 {
-                    std::cout << TColor::colorize('O', TColor::GREEN, TColor::BOLD);
+                    std::cout << TColor::colorize(' ', TColor::GREEN, TColor::REVERSE);
                     charPrinted = true;
                     break;
                 }
@@ -321,7 +344,8 @@ void sg::Game::render() const
     }
 
     std::cout << "--------------------------------------------------\n";
-    std::cout << " Lives: " << m_currentSnake.get_lives()
+    std::cout << "Score: " << m_currentSnake.get_score() * 10 << " | "
+              << "Lives: " << m_currentSnake.get_lives()
               << " | Fruits Eaten: " << m_currentSnake.get_food_eaten() << "/" << m_currentSnake.get_food_target()
               << " | Snake Size: " << m_currentSnake.snake_body().size() << '\n';
     std::cout << "Move direction: [" << m_currentSnake.move_direction() << "]\n";

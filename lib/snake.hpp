@@ -54,6 +54,8 @@ namespace sg
         [[nodiscard]]
         inline unsigned short get_food_eaten() const { return m_fruitsEaten; }
 
+        inline unsigned short get_score() const { return m_score; }
+
         [[nodiscard]]
         inline unsigned short get_food_target() const { return m_totalFoodToEat; }
 
@@ -69,6 +71,7 @@ namespace sg
         unsigned short m_lives;
         unsigned short m_totalFoodToEat;
         unsigned short m_fruitsEaten{0};
+        unsigned short m_score{0};
 
     }; // Class Snake
 
