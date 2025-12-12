@@ -17,13 +17,53 @@ void ArgumentsReader::parse(int argc, char* argv[], GameOptions& options){
             printUsage();
             exit(0);
         } else if(arg == "--fps" && i + 1 < argc){
-            options.fps = std::stoi(argv[++i]);
+            try
+            {
+                options.fps = std::stoi(argv[++i]);
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "Invalid Argument..." << '\n';
+                printUsage();
+                exit(1);
+            }
+            
         } else if(arg == "--lives" && i + 1 < argc){
-            options.lives = std::stoi(argv[++i]);
+            try
+            {
+                options.lives = std::stoi(argv[++i]);
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "Invalid Argument..." << '\n';
+                printUsage();
+                exit(1);
+            }
+            
         } else if(arg == "--food" && i + 1 < argc){
-            options.food = std::stoi(argv[++i]);
+            try
+            {
+                options.food = std::stoi(argv[++i]);
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "Invalid Argument..." << '\n';
+                printUsage();
+                exit(1);
+            }
+            
         } else {
-            options.levelPath = arg;
+            try
+            {
+                options.levelPath = arg;
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "Invalid Argument..." << '\n';
+                printUsage();
+                exit(1);
+            }
+            
         }
         // else if(arg == "--playertype" && i + 1 < argc){
         //     options.playerType = argv[++i];
