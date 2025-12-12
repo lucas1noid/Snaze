@@ -56,7 +56,7 @@ sg::MoveDirection sg::BacktrackingMoveController::provide_snake_dir(const sg::Co
     }
 
     m_foodPos = ctx.m_food;
-    m_maze = ctx.m_maze;
+    m_maze = &ctx.m_maze;
     m_visitedPosition.clear();
 
     if (calculate_path(ctx.m_snake))
@@ -85,7 +85,6 @@ bool sg::BacktrackingMoveController::calculate_path(sg::Snake currentSnake)
     const sg::Position& head = currentSnake.head_position();
     m_visitedPosition.insert(head);
     
-
     for (sg::MoveDirection& dir : m_validMoves)
     {
         if ((dir + currentSnake.move_direction()).equals(0, 0))
@@ -93,20 +92,23 @@ bool sg::BacktrackingMoveController::calculate_path(sg::Snake currentSnake)
             continue;
         }
 
-        sg::Position newPos = head + dir;
+        sg::Position potentialNextHead = head + dir;
+        if (m_visitedPosition.count(potentialNextHead) > 0)
+        {
+            continue;
+        }
 
-        if (currentSnake.head_collided(m_maze))
+        sg::Snake simulatedSnake = currentSnake; 
+
+        simulatedSnake.set_move_direction(dir);
+        simulatedSnake.update_position_by_move_direction();
+
+        if (simulatedSnake.head_collided(*m_maze))
         {
             continue;
         }
-        if (m_visitedPosition.count(newPos) > 0)
-        {
-            continue;
-        }
-        currentSnake.set_move_direction(dir);
-        currentSnake.update_position_by_move_direction();
-        bool foundPath = calculate_path(currentSnake);
-        if (foundPath)
+
+        if (calculate_path(simulatedSnake))
         {
             m_movePath.push(dir);
             return true;

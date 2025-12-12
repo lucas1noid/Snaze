@@ -26,10 +26,10 @@ namespace sg
         
         private:
         bool calculate_path(sg::Snake currentSnake);
-        std::set<sg::Position> m_visitedPosition;
-        std::stack<sg::MoveDirection> m_movePath;
-        sg::Maze& m_maze;
-        std::vector<sg::Position> m_foodPos;
+        std::set<sg::Position> m_visitedPosition{};
+        std::stack<sg::MoveDirection> m_movePath{};
+        const sg::Maze* m_maze;
+        std::vector<sg::Position> m_foodPos{};
 
         std::vector<sg::MoveDirection> m_validMoves
         {

@@ -144,7 +144,7 @@ void sg::Game::welcome_screen()
         else if (choice == '2')
         {
             m_playerType = PlayerType::AI;
-            m_controllerStrategy = std::make_unique<sg::RandomMoveController>();
+            m_controllerStrategy = std::make_unique<sg::BacktrackingMoveController>();
             validChoice = true;
         }
         else if (choice == 'q')

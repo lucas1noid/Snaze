@@ -68,6 +68,15 @@ namespace sg
             Position result(m_y + rhs.m_y, m_x + rhs.m_x);
             return result;
         }
+
+        inline bool operator<(const Position& other) const
+        {
+            if (m_y != other.m_y)
+            {
+                return m_y < other.m_y;
+            }
+            return m_x < other.m_x;
+        }
         // If x and y position both are 0, it means that the object is on the up-right corner. I. e. Y axis are fliped.
     }; // struct Position
 
