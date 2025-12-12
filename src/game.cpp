@@ -125,7 +125,11 @@ void sg::Game::welcome_screen()
         std::cout << "       Controle a cobra com W, A, S, D.\n\n";
 
         std::cout << "   [" << TColor::colorize("2", TColor::YELLOW, TColor::BOLD) << "] - " 
-                  << TColor::colorize("IA", TColor::MAGENTA) << "\n";
+                  << TColor::colorize("Random IA", TColor::MAGENTA) << "\n";
+        std::cout << "       Assista a IA jogar sozinha, tentando ganhar! ou lutando para sobreviver...\n\n";
+
+        std::cout << "   [" << TColor::colorize("3", TColor::YELLOW, TColor::BOLD) << "] - " 
+                  << TColor::colorize("Backtracking IA", TColor::MAGENTA) << "\n";
         std::cout << "       Assista a IA jogar sozinha, tentando ganhar! ou lutando para sobreviver...\n\n";
 
         std::cout << "   [" << TColor::colorize('q', TColor::RED, TColor::BOLD) << "] - "
@@ -142,6 +146,12 @@ void sg::Game::welcome_screen()
             validChoice = true;
         }
         else if (choice == '2')
+        {
+            m_playerType = PlayerType::AI;
+            m_controllerStrategy = std::make_unique<sg::RandomMoveController>();
+            validChoice = true;
+        }
+        else if (choice == '3')
         {
             m_playerType = PlayerType::AI;
             m_controllerStrategy = std::make_unique<sg::BacktrackingMoveController>();
