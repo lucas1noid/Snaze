@@ -24,14 +24,6 @@ int main(int argc, char* argv[]) {
   sg::ArgumentsReader argReader;
   argReader.parse(argc, argv, options);
 
-    /*
-  if (argc != 2)
-  {
-    std::cout << "invalid arguments\n";
-    return 1;
-  }
-  */
-
   std::vector<sg::Maze> mazes = sg::parse_maze_input_file(options.levelPath);
 
   if (mazes.empty())
