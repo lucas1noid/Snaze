@@ -2,9 +2,11 @@
 ﻿
 # Projeto Snaze
 
-A reinterpretation of the classic Snake game in C++, with a focus on state machines and AI/player controllers.
+>A reinterpretation of the classic Snake game in C++, with a focus on state machines and AI/player controllers.
+>
 ![img_start](docs/start-img.png)
 ![img_won](docs/won-img.png)
+
 [![C++](https://img.shields.io/badge/lang-C%2B%2B-00599C)]()
 [![CMake](https://img.shields.io/badge/build-CMake-6A4C93)]()
 
@@ -50,4 +52,11 @@ cmake --build build
 ./build/snaze --help
 #Use --help only if you do not know the commands. 
 ```
+## Devs
+* Lucas Lopes - [perfil GitHub](https://github.com/lucas1noid)
+* Miguel Guion - [perfil GitHub](https://github.com/Migalhaz)
+
+Professor orientador:
+* Selan Santos
+
 &copy; DIMAp/UFRN 2021-2025.
